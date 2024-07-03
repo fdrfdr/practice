@@ -1,0 +1,59 @@
+.lk {
+  padding: 44px 0px;
+  font-family: "ubuntu", sans-serif;
+}
+.lk-content {
+  display: flex;
+  flex-direction: column;
+}
+.lk-content__link {
+  color: #3A8BEA;
+  line-height: 37px;
+  font-size: 32px;
+}
+.lk-advertisement {
+  margin-top: 235px;
+  display: flex;
+  flex-direction: column;
+}
+.lk-advertisement__title {
+  font-size: 48px;
+  line-height: 55px;
+}
+.lk-advertisement__subtitle {
+  margin-top: 14px;
+  line-height: 42px;
+  font-size: 36px;
+  color: #707070;
+}
+.lk-advertisement__link {
+  margin-top: 100px;
+  padding: 48px 107px;
+  background-color: #3A8BEA;
+  border-radius: 25px;
+  max-width: 786px;
+  color: #FFFFFF;
+  font-size: 50px;
+  line-height: 57px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "allerta";
+  src: url("../fonts/allerta/Allerta-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "inter";
+  src: url("../fonts/inter/Inter-Regular.ttf");
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */

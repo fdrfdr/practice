@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../scss/registration/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html"><img src="../img/Logo.svg"></a>
+                <ul class="header-menu">
+                    <li class="header-menu__item"><a href="index.html" class="header-menu__link ">Главная страница</a></li>
+                    <li class="header-menu__item"><a href="catalog.html" class="header-menu__link">Каталог</a></li>
+                    <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
+                    <li class="header-menu__item"><a href="feedback.html" class="header-menu__link">Обратная связь</a></li>
+                    <li class="header-menu__item"><a href="lk.html" class="header-menu__link">Личный кабинет</a></li>
+                </ul>
+
+                <div class="header-authentication">
+                    <a href="login.html" class="header-authentication__button">Войти</a>
+                    <a href="registration.html" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="login">
+        <form class="login-form">
+            <span class="login-form__title">Регистрация</span>
+            <input type="text" class="login-form__name" placeholder="Введите логин">
+            <input type="password" class="login-form__password" placeholder="Введите пароль">
+            <input type="submit" class="login-form__button"  value="Зарегистрироваться" >
+        </form>
+
+    </div>
+
+</body>
+</html>
