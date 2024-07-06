@@ -186,6 +186,11 @@
   gap: 24px;
 }
 
+.tab {
+  background: url(/img/main.png);
+  height: 990px;
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;

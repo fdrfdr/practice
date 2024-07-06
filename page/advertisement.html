@@ -13,9 +13,18 @@
             <a href="lk.html" class="advertisement-link">Вернуться в личный кабинет</a>
             <div class="advertisement-content">
                 <form class="advertisement-form">
+                    <label class="advertisement-form__title">Новое объявление</label>
                     <input type="text" class="advertisement-form__item" placeholder="Наименование">
                     <input type="text" class="advertisement-form__item" placeholder="Цена">
                     <input type="text" class="advertisement-form__item" placeholder="Площадь, м²">
+                    <div class="advertisement-container">
+                    <label for="file-upload" class="custom-file-upload">
+                        Изображение
+                    </label>
+                    <input id="file-upload" type="file">
+                    <input class="advertisement-button" id="file-button" type="button" value="Прикрепить">
+                </div>
+                <button class="advertisement-form__button">Опубликовать</button>
                 </form>
             </div>
         </div>

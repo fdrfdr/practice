@@ -27,6 +27,80 @@
             </div>
         </div>
     </header>
+    <style>
+
+      .tab {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .tab-content {
+        display: none;
+        background-color: #FFFFFF;
+        padding: 35px 25px;
+      }
+
+      .tab-content:target {
+        display: block;
+      }
+
+      .tab-nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        order: -1;
+      }
+
+      .tab-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #FFFFFF;
+        text-decoration: none;
+        background: 0 0;
+        border: 0;
+        border-radius: 0.375rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+      }
+
+      #content-1:target~.tab-nav>[href="#content-1"],
+      #content-2:target~.tab-nav>[href="#content-2"],
+      #content-3:target~.tab-nav>[href="#content-3"],
+      #content-4:target~.tab-nav>[href="#content-4"] {
+        background-color: #0066ff;
+        color: #fff;
+        cursor: default;
+      }
+    </style>
+
+
+    <div class="tab">
+        <div class="container">
+            <div class="tab-nav">
+                <a class="tab-link" href="#content-1">Вкладка 1</a>
+                <a class="tab-link" href="#content-2">Вкладка 2</a>
+                <a class="tab-link" href="#content-3">Вкладка 3</a>
+                <a class="tab-link" href="#content-4">Вкладка 4</a>
+            </div>
+            <div class="tab-content" id="content-1">
+                <select>
+                    <option>Квартира</option>
+                    <option>Дом</option>
+                </select>
+            </div>
+            <div class="tab-content" id="content-2">
+             Содержимое 2... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.
+            </div>
+            <div class="tab-content" id="content-3">
+            Содержимое 3... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.
+            </div>
+            <div class="tab-content" id="content-4">
+                Содержимое 3... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.
+            </div>
+
+        </div>
+    </div>
+
+
     <div class="apartament">
         <div class="container">
             <div class="apartament-wrapper">
