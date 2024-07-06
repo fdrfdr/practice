@@ -6,6 +6,7 @@
     <title>Главная страница</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="../scss/mainpage/main.css">
+    <script src="/JS/jquery.js"></script>
 </head>
 <body>
     <header class="header">
@@ -28,77 +29,169 @@
         </div>
     </header>
     <style>
+.xxx{
+    background: url(/img/main.png) no-repeat;
+    background-position: center center;
+    opacity: 80%;
+    height: 990px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.tabs-container {
+    width: 600px;
+    margin: 50px auto;
+    border-radius: 5px;
 
-      .tab {
-        display: flex;
-        flex-direction: column;
-      }
+    display: flex;
+    flex-direction: column;
+}
 
-      .tab-content {
-        display: none;
-        background-color: #FFFFFF;
-        padding: 35px 25px;
-      }
+.tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 
-      .tab-content:target {
-        display: block;
-      }
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
 
-      .tab-nav {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-        order: -1;
-      }
+.tab.active {
+    background-color: #3A8BEA;
+    color: #FFFFFF;
+}
 
-      .tab-link {
-        display: block;
-        padding: 0.5rem 1rem;
-        color: #FFFFFF;
-        text-decoration: none;
-        background: 0 0;
-        border: 0;
-        border-radius: 0.375rem;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-      }
+.tabs-content {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
 
-      #content-1:target~.tab-nav>[href="#content-1"],
-      #content-2:target~.tab-nav>[href="#content-2"],
-      #content-3:target~.tab-nav>[href="#content-3"],
-      #content-4:target~.tab-nav>[href="#content-4"] {
-        background-color: #0066ff;
-        color: #fff;
-        cursor: default;
-      }
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+.home-num{
+    cursor: pointer;
+    color: black; /* Начальный цвет текста */
+    transition: color 0.3s ease; /* Добавляем плавный переход */
+}
+.home-nums{
+    display: none;
+    cursor: pointer;
+
+}
+.home-num {
+    cursor: pointer;
+
+}
+
+.home-num.selected {
+    color: #3A8BEA;; /* Измените цвет на нужный */
+}
+
     </style>
 
+<div class="xxx">
+<div class="tabs-container">
+    <ul class="tabs">
+        <li class="tab active" data-target="#tab-1">Купить</li>
+        <li class="tab" data-target="#tab-2">Снять</li>
+        <li class="tab" data-target="#tab-3">Продать</li>
+        <li class="tab" data-target="#tab-4">Сдать</li>
+    </ul>
 
-    <div class="tab">
-        <div class="container">
-            <div class="tab-nav">
-                <a class="tab-link" href="#content-1">Вкладка 1</a>
-                <a class="tab-link" href="#content-2">Вкладка 2</a>
-                <a class="tab-link" href="#content-3">Вкладка 3</a>
-                <a class="tab-link" href="#content-4">Вкладка 4</a>
-            </div>
-            <div class="tab-content" id="content-1">
-                <select>
-                    <option>Квартира</option>
-                    <option>Дом</option>
-                </select>
-            </div>
-            <div class="tab-content" id="content-2">
-             Содержимое 2... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.
-            </div>
-            <div class="tab-content" id="content-3">
-            Содержимое 3... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.
-            </div>
-            <div class="tab-content" id="content-4">
-                Содержимое 3... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.
-            </div>
+    <div class="tabs-content">
+        <div id="tab-1" class="tab-content active">
+            <select>
+                <option value="Квартиру">Квартиру</option>
+                <option value="Дом">Дом</option>
+            </select>
+            <label class="home-num" for="studio">Студия</label>
+    <label class="home-num" for="one">1</label>
+    <label class="home-num" for="two">2</label>
+    <label class="home-num" for="thri">3</label>
+    <label class="home-num" for="four">4+</label>
+
+    <input class="home-nums" type="radio" id="studio" name="room-type">
+    <input class="home-nums" type="radio" id="one" name="room-type">
+    <input class="home-nums" type="radio" id="two" name="room-type">
+    <input class="home-nums" type="radio" id="thri" name="room-type">
+    <input class="home-nums" type="radio" id="four" name="room-type">
+        </div>
+
+        <div id="tab-2" class="tab-content">
+            <h2>Форма вкладки 2</h2>
+            <label for="name-2">Имя:</label>
+            <input type="text" id="name-2" name="name-2"><br><br>
+            <label for="email-2">Email:</label>
+            <input type="email" id="email-2" name="email-2"><br><br>
+            <input type="checkbox" id="checkbox-2" name="checkbox-2">
 
         </div>
+        <div id="tab-3" class="tab-content">
+            <h2>Форма вкладки 3</h2>
+            <label for="name-3">Имя:</label>
+            <input type="text" id="name-3" name="name-3"><br><br>
+            <label for="email-3">Email:</label>
+            <input type="email" id="email-3" name="email-3"><br><br>
+            <input type="checkbox" id="checkbox-3" name="checkbox-3">
+        </div>
+        <div id="tab-4" class="tab-content">
+            <h2>Форма вкладки 4</h2>
+            <label for="name-4">Имя:</label>
+            <input type="text" id="name-4" name="name-4"><br><br>
+            <label for="email-4">Email:</label>
+            <input type="email" id="email-4" name="email-4"><br><br>
+            <input type="checkbox" id="checkbox-4" name="checkbox-4">
+        </div>
     </div>
+</div>
+</div>
+<script>
+
+
+
+$(document).ready(function() {
+    // Обработка вкладок
+    $(".tab").click(function() {
+        const target = $(this).data("target");
+        $(".tab").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-content").removeClass("active");
+        $(target).addClass("active");
+    });
+});
+$(document).ready(function() {
+    function updateSelectedLabel() {
+        $('.home-num').removeClass('selected');
+        $('.home-nums:checked').each(function() {
+            $('label[for="' + this.id + '"]').addClass('selected');
+        });
+    }
+
+    $('.home-num').on('click', function() {
+        $('#' + $(this).attr('for')).prop('checked', true);
+        updateSelectedLabel();
+    });
+
+    // Инициализация начального состояния
+    updateSelectedLabel();
+});
+
+</script>
 
 
     <div class="apartament">
