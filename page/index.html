@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="../scss/mainpage/main.css">
     <script src="/JS/jquery.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <script src="header.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html"><img src="../img/Logo.svg"></a>
-                <ul class="header-menu">
+                <a href="index.html"><img src="../img/Logo.svg" alt="Logo"></a>
+                <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="header-menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+                <ul class="header-menu" id="header-menu">
                     <li class="header-menu__item"><a href="index.html" class="header-menu__link header-menu__link--active">Главная страница</a></li>
                     <li class="header-menu__item"><a href="catalog.html" class="header-menu__link">Каталог</a></li>
                     <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
@@ -27,6 +34,8 @@
                 </div>
             </div>
         </div>
+
+
     </header>
     <style>
 .xxx{
@@ -137,8 +146,18 @@ select:focus {
 .home-container{
     display: flex;
     gap:18px;
+    justify-content: center;
+    align-items: center;
 }
-
+.tab-button{
+    color: #FFFFFF;
+    background-color: #3A8BEA;
+    padding: 20px 30px;
+    border-radius: 20px;
+    font-family: "ubuntu", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+}
     </style>
 
 <div class="xxx">
@@ -172,6 +191,7 @@ select:focus {
             <input class="home-sallary" type="text" id="sallary" placeholder="- до">
             <input class="home-sallary" type="text" id="sallary" placeholder="Где">
             <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
         </div>
 
         <div id="tab-2" class="tab-content">
@@ -195,6 +215,7 @@ select:focus {
             <input class="home-sallary" type="text" id="sallary" placeholder="- до">
             <input class="home-sallary" type="text" id="sallary" placeholder="Где">
             <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
         </div>
 
 
@@ -206,6 +227,7 @@ select:focus {
             <input class="home-sallary" type="text" id="sallary" placeholder="Ваш телефон">
             <input class="home-sallary" type="text" id="sallary" placeholder="Ваше имя">
             <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
         </div>
 
         <div id="tab-4" class="tab-content">
@@ -216,6 +238,7 @@ select:focus {
             <input class="home-sallary" type="text" id="sallary" placeholder="Ваш телефон">
             <input class="home-sallary" type="text" id="sallary" placeholder="Ваше имя">
             <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
         </div>
     </div>
 </div>
